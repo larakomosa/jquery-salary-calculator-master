@@ -25,4 +25,9 @@ function addEmployee() {
     annualSalary,
   };
   employeeList.push(employee);
+  displayEmployees();
+}
+
+function displayEmployees() {
+  $('.inputForm').empty();
 }

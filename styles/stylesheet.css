@@ -1,3 +1,16 @@
 body {
   background-color: gray;
 }
+
+.employeeTable {
+  border-collapse: collapse;
+}
+
+.employeeTable td {
+  padding: 6px 10px;
+  border: 1px solid #333333;
+}
+
+.employeeInfo {
+  margin-top: 50px;
+}
