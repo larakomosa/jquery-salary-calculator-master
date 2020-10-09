@@ -53,12 +53,11 @@ function totalSalaryCosts() {
   let totalSalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
-    totalSalary += parseInt(item.annualSalary);
-    console.log(totalSalary);
+    totalSalary += parseInt(item.annualSalary) / 12;
   }
-  let monthlySalary = totalSalary / 12;
-  $('.js-total-salary').text(monthlySalary);
+  let monthlySalary = totalSalary.toFixed();
 
+  $('.js-total-salary').text(monthlySalary);
   if (monthlySalary > 20000) {
     $('.js-total-salary').css('background-color', 'red');
   }
