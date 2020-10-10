@@ -60,7 +60,7 @@ function displayEmployees() {
             <td>${item.lastName}</td>
             <td>${item.idNumber}</td>
             <td>${item.jobTitle}</td>
-            <td>${item.annualSalary}</td>
+            <td>$${item.annualSalary}</td>
             <td><button class="delete-button" data-index="${i}">Delete</button></td>
           </tr>`
       );
