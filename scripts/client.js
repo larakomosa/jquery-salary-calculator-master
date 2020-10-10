@@ -80,7 +80,8 @@ function totalSalaryCosts() {
   $('.js-total-salary').text(monthlySalary);
   if (monthlySalary > 20000) {
     $('.js-total-salary').css('background-color', 'red');
-  adjustSalary();
+    adjustSalary();
+  }
 }
 
 function deleteEmployee() {
