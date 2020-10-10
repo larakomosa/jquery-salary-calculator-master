@@ -78,10 +78,8 @@ function totalSalaryCosts() {
   let monthlySalary = totalSalary.toFixed();
 
   $('.js-total-salary').text(monthlySalary);
-  if (monthlySalary > 20000) {
-    $('.js-total-salary').css('background-color', 'red');
-    adjustSalary();
-  }
+
+  adjustSalary();
 }
 
 function deleteEmployee() {
@@ -107,5 +105,6 @@ function adjustSalary() {
   $('.js-total-salary').text(monthlySalary);
   if (monthlySalary > 20000) {
     $('.js-total-salary').css('background-color', 'red');
-  }
+  } else if (monthlySalary < 20000)
+    $('.js-total-salary').css('background-color', 'white');
 }
