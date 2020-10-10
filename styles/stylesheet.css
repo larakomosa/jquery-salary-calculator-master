@@ -14,3 +14,16 @@ body {
 .employeeInfo {
   margin-top: 50px;
 }
+
+header {
+  height: 200px;
+  width: auto;
+  background-image: url(employees.png);
+  background-size: 1000px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+
+.title{}
+)

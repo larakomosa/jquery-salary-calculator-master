@@ -16,7 +16,6 @@ function addEmployee() {
   const idNumber = $('.js-field-id').val();
   const jobTitle = $('.js-field-title').val();
   const annualSalary = $('.js-field-salary').val();
-  console.log(firstName, lastName, idNumber, jobTitle, annualSalary);
 
   const employee = {
     firstName,
@@ -26,6 +25,12 @@ function addEmployee() {
     annualSalary,
     isDeleted: false,
   };
+  $('.js-field-first').val('');
+  $('.js-field-last').val('');
+  $('.js-field-id').val('');
+  $('.js-field-title').val('');
+  $('.js-field-salary').val('');
+
   employeeList.push(employee);
   displayEmployees();
 }
@@ -75,14 +80,15 @@ function deleteEmployee() {
 }
 
 function adjustSalary() {
-  let adjustedSalary = 0;
+  let monthlySalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
 
     if (item.isDeleted === false) {
-      adjustedSalary = parseInt(item.annualSalary) / 12;
+      console.log(item.firstName);
+      monthlySalary += parseInt(item.annualSalary / 12);
     }
-    console.log(adjustedSalary);
+    console.log(monthlySalary);
   }
-  $('.js-total-salary').text(adjustedSalary);
+  $('.js-total-salary').text(monthlySalary);
 }
