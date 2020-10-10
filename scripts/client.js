@@ -24,6 +24,7 @@ function addEmployee() {
     idNumber,
     jobTitle,
     annualSalary,
+    isDeleted: false,
   };
   employeeList.push(employee);
   displayEmployees();
@@ -64,6 +65,24 @@ function totalSalaryCosts() {
 }
 
 function deleteEmployee() {
+  const index = $(this).data('index');
+  employeeList[index].isDeleted = true;
+
   $(this).parent().parent().empty();
   console.log('working?');
+
+  adjustSalary();
+}
+
+function adjustSalary() {
+  let adjustedSalary = 0;
+  for (let i = 0; i < employeeList.length; i++) {
+    const item = employeeList[i];
+
+    if (item.isDeleted === false) {
+      adjustedSalary = parseInt(item.annualSalary) / 12;
+    }
+    console.log(adjustedSalary);
+  }
+  $('.js-total-salary').text(adjustedSalary);
 }
