@@ -1,14 +1,39 @@
 body {
-  background-color: gray;
+  background-color: indianred;
 }
 
 .employeeTable {
+  margin-top: 75px;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.employeeTable thead {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+.employeeTable tfoot {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  background-color: white;
+}
+
+.employeeTable tbody {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: darkslategray;
+  color: white;
 }
 
 .employeeTable td {
-  padding: 6px 10px;
-  border: 1px solid #333333;
+  padding: 8px 20px;
+  border: 3px solid #333333;
 }
 
 .employeeInfo {
@@ -16,14 +41,70 @@ body {
 }
 
 header {
-  height: 200px;
+  height: 300px;
   width: auto;
   background-image: url(employees.png);
-  background-size: 1000px 200px;
+  background-size: 1000px 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
+  margin-bottom: 0px;
+  border: 10px solid darkslategrey;
 }
 
-.title{}
-)
+.topBanner {
+  background-color: lavender;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 70px;
+  margin-bottom: 200px;
+  margin-top: -205px;
+  opacity: 0.7;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: darkslategray;
+  text-align: center;
+  margin-top: unset;
+}
+
+.inputForm {
+  position: center;
+  height: 75px;
+  width: 900px;
+  background-color: darkslategrey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+}
+
+.input {
+  margin-top: 20px;
+  height: 30px;
+  width: 150px;
+  font-size: 1.2rem;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.js-field-first {
+  margin-left: 25px;
+}
+
+.button {
+  display: block;
+  height: 41px;
+  width: 400px;
+  font-size: 20px;
+  border: 5px dotted darkslategray;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  background-color: lavender;
+  color: white;
+}
