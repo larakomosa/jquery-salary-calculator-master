@@ -2,7 +2,7 @@
 
 ## Description
 
-The product collets and stores employee information while calculating monthly salary costs. Employees can easily be added or removed using a submit or delete button. As employees are added or removed, the monthly sales costs are adjusted accordingly. To assist in detecting abnormally high payroll expenses, the program detects and highlight any total Salary costs that exceed \$20,000.
+The product collects and stores employee information while calculating monthly salary costs. Employees can easily be added or removed using a submit or delete button. As employees are added or removed, the monthly sales costs are adjusted accordingly. To assist in detecting abnormally high payroll expenses, the program detects and highlight any total Salary costs that exceed \$20,000.
 
 ## Screen Shots
 
