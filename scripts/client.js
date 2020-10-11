@@ -5,7 +5,7 @@ const employeeList = []; // array to store employee information (objects)
 $(document).ready(readyNow);
 
 function readyNow() {
-  //function is called once clicked
+  //function is called once appropriate button is clicked
   console.log('readyNow');
   $('.js-button').on('click', addEmployee);
   $('.js-employee-list').on('click', '.delete-button', deleteEmployee);
