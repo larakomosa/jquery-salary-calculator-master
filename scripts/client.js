@@ -5,7 +5,7 @@ const employeeList = [];
 $(document).ready(readyNow);
 
 function readyNow() {
-  console.log('working');
+  console.log('readyNow');
   $('.js-button').on('click', addEmployee);
   $('.js-employee-list').on('click', '.delete-button', deleteEmployee);
 }
@@ -49,7 +49,6 @@ function addEmployee() {
 function displayEmployees() {
   $('.js-employee-list').empty();
   for (let i = 0; i < employeeList.length; i++) {
-    console.log('display', employeeList[i]);
     const item = employeeList[i];
 
     if (item.isDeleted === true) {
@@ -100,7 +99,6 @@ function adjustSalary() {
     if (item.isDeleted === false) {
       monthlySalary += parseInt(item.annualSalary / 12);
     }
-    console.log(monthlySalary);
   }
   $('.js-total-salary').text(monthlySalary);
   if (monthlySalary > 20000) {

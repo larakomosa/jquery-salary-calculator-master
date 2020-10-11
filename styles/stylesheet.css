@@ -2,112 +2,56 @@ body {
   background-image: url(background.jpg);
 }
 
-.employeeTable {
-  margin-top: 25px;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.employeeTable thead {
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-}
-
-.employeeTable tfoot {
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: right;
-  background-color: white;
-}
-
-.employeeTable tbody {
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: darkslategray;
-  color: white;
-}
-
-.employeeTable td {
-  padding: 8px 30px;
-  border: 3px solid #333333;
-}
-
-.employeeInfo {
-  margin-top: 50px;
-}
-
 header {
   height: 300px;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0px;
   background-image: url(canva1.png);
   background-size: 1200px 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
-  margin-bottom: 0px;
-  border: 10px solid #9f5346;
-}
-
-.employeeInfo {
-  margin-top: 75px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 60px;
-  width: 900px;
-  background-color: #9f5346;
-  border: 5px solid #2d303e;
+  border: 10px solid #c8a589;
 }
 
 .topBanner {
-  background-color: lavender;
-  width: auto;
   height: 85px;
+  width: auto;
   margin-top: 85px;
+  background-color: lavender;
   opacity: 0.8;
 }
 
 h1 {
-  font-size: 50px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 3.5rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #0b114a;
-  text-align: center;
-  padding-top: 10px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: White;
-  text-align: center;
-  padding-top: 0px;
-  margin-top: 5px;
 }
 
 .inputForm {
-  position: center;
   height: 75px;
   width: 900px;
-  background-color: #2d303e;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
+  position: center;
+  background-color: #2d303e;
+  border: #c8a589;
 }
 
 .input {
-  margin-top: 20px;
   height: 30px;
   width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
-  display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
 }
 
 .js-field-first {
@@ -115,16 +59,71 @@ h2 {
 }
 
 .button {
-  display: block;
-  height: 41px;
+  height: 40px;
   width: 400px;
-  font-size: 20px;
-  font-weight: bold;
-  border: 5px solid #2d303e;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 35px;
-  background-color: lavender;
-  margin-top: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #d3d9dd;
   color: #2d303e;
+  border: 5px solid #2d303e;
+}
+
+.employeeInfo {
+  height: 75px;
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  margin-bottom: 0px;
+  background-color: #2d303e;
+  border-top: 10px solid #c8a589;
+  border-bottom: 10px solid #c8a589;
+}
+
+h2 {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d3d9dd;
+}
+
+.employeeTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.employeeTable thead {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2d303e;
+  background-color: #d3d9dd;
+}
+
+.employeeTable tfoot {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2d303e;
+  background-color: #dcd9dd;
+}
+
+.employeeTable tbody {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2d303e;
+  color: lavender;
+}
+
+.employeeTable td {
+  padding: 8px 30px;
+  border: 3px solid #a7abad;
 }
