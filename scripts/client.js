@@ -59,7 +59,10 @@ function displayEmployees() {
             <td>${item.lastName}</td>
             <td>${item.idNumber}</td>
             <td>${item.jobTitle}</td>
-            <td>$${item.annualSalary}</td>
+            <td>$${item.annualSalary.replace(
+              /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,
+              ','
+            )}</td>
             <td><button class="delete-button" data-index="${i}">Delete</button></td>
           </tr>`
       );
@@ -74,9 +77,9 @@ function totalSalaryCosts() {
     const item = employeeList[i];
     totalSalary += parseInt(item.annualSalary) / 12;
   }
-  let monthlySalary = totalSalary.toFixed();
-
-  $('.js-total-salary').text(monthlySalary);
+  $('.js-total-salary').text(
+    totalSalary.toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+  );
 
   adjustSalary();
 }
@@ -86,6 +89,7 @@ function deleteEmployee() {
   employeeList[index].isDeleted = true;
 
   $(this).parent().parent().empty();
+  employeeList.splice(index, 1);
   console.log('working?');
 
   adjustSalary();
@@ -100,7 +104,9 @@ function adjustSalary() {
       monthlySalary += parseInt(item.annualSalary / 12);
     }
   }
-  $('.js-total-salary').text(monthlySalary);
+  $('.js-total-salary').text(
+    monthlySalary.toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+  );
   if (monthlySalary > 20000) {
     $('.js-total-salary').css('background-color', 'red');
   } else if (monthlySalary < 20000)
