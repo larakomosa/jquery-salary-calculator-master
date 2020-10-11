@@ -19,9 +19,13 @@ The product collets and stores employee information while calculating monthly sa
 - Annual Salary
 
 2: Be sure all input fields are completed
+
 3: Select the input button to input Employee Information
+
 4: Product will display employee information in a table on webpage
+
 5: To delete employee information, select the delete button
+
 6: Once an employee is deleted, monthly salary will be deleted accordingly.
 
 ## Built With
