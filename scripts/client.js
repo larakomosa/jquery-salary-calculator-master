@@ -78,7 +78,7 @@ function totalSalaryCosts() {
     totalSalary += parseInt(item.annualSalary) / 12;
   }
   $('.js-total-salary').text(
-    totalSalary.toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+    totalSalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
   );
 
   adjustSalary();
@@ -96,19 +96,19 @@ function deleteEmployee() {
 }
 
 function adjustSalary() {
-  let monthlySalary = 0;
+  let totalSalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
 
     if (item.isDeleted === false) {
-      monthlySalary += parseInt(item.annualSalary / 12);
+      totalSalary += parseInt(item.annualSalary / 12);
     }
   }
   $('.js-total-salary').text(
-    monthlySalary.toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+    totalSalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
   );
-  if (monthlySalary > 20000) {
-    $('.js-total-salary').css('background-color', 'red');
-  } else if (monthlySalary < 20000)
-    $('.js-total-salary').css('background-color', 'white');
+  if (totalSalary > 20000) {
+    $('.js-total-salary').css('background-color', '#c94d53');
+  } else if (totalSalary < 20000)
+    $('.js-total-salary').css('background-color', '#d3d9dd');
 }
