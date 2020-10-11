@@ -1,9 +1,9 @@
 body {
-  background-color: indianred;
+  background-image: url(background.jpg);
 }
 
 .employeeTable {
-  margin-top: 75px;
+  margin-top: 25px;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
@@ -32,7 +32,7 @@ body {
 }
 
 .employeeTable td {
-  padding: 8px 20px;
+  padding: 8px 30px;
   border: 3px solid #333333;
 }
 
@@ -42,43 +42,61 @@ body {
 
 header {
   height: 300px;
-  width: auto;
-  background-image: url(employees.png);
-  background-size: 1000px 300px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(canva1.png);
+  background-size: 1200px 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
   margin-bottom: 0px;
-  border: 10px solid darkslategrey;
+  border: 10px solid #9f5346;
+}
+
+.employeeInfo {
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  width: 900px;
+  background-color: #9f5346;
+  border: 5px solid #2d303e;
 }
 
 .topBanner {
   background-color: lavender;
   width: auto;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 70px;
-  margin-bottom: 200px;
-  margin-top: -205px;
-  opacity: 0.7;
+  height: 85px;
+  margin-top: 85px;
+  opacity: 0.8;
 }
 
 h1 {
   font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: darkslategray;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0b114a;
   text-align: center;
-  margin-top: unset;
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: White;
+  text-align: center;
+  padding-top: 0px;
+  margin-top: 5px;
 }
 
 .inputForm {
   position: center;
   height: 75px;
   width: 900px;
-  background-color: darkslategrey;
+  background-color: #2d303e;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -50px;
+  margin-top: 15px;
 }
 
 .input {
@@ -101,10 +119,12 @@ h1 {
   height: 41px;
   width: 400px;
   font-size: 20px;
-  border: 5px dotted darkslategray;
+  font-weight: bold;
+  border: 5px solid #2d303e;
   margin-left: auto;
   margin-right: auto;
   margin-top: 35px;
   background-color: lavender;
-  color: black;
+  margin-top: 35px;
+  color: #2d303e;
 }
