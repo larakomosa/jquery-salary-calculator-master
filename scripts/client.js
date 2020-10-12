@@ -54,7 +54,7 @@ function displayEmployees() {
     const item = employeeList[i];
 
     if (item.isDeleted === true) {
-      //prevents deleted employees from jumping back on DOM when new employee is submitted
+      //prevents deleted employees from jumping back on DON when new employee is submitted
     } else {
       $('.js-employee-list').append(
         `<tr>
@@ -78,7 +78,7 @@ function totalSalaryCosts() {
   let totalSalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
-    totalSalary += parseInt(item.annualSalary) / 12;
+    totalSalary += parseInt(item.annualSalary) / 12; //converts string to number and adjusts to monthly costs
   }
   $('.js-total-salary').text(
     totalSalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
@@ -91,8 +91,8 @@ function deleteEmployee() {
   const index = $(this).data('index');
   employeeList[index].isDeleted = true;
 
-  $(this).parent().parent().empty();
-  console.log('working?');
+  $(this).parent().parent().empty(); //removes employee from Employee Information table
+  console.log('employee deleted');
 
   adjustSalary();
 }
@@ -110,7 +110,7 @@ function adjustSalary() {
     monthlySalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
   );
   if (monthlySalary > 20000) {
-    $('.js-total-salary').css('background-color', 'red');
+    $('.js-total-salary').css('background-color', '#c94d53'); //background color if costs exceed $20,000
   } else if (monthlySalary < 20000)
-    $('.js-total-salary').css('background-color', 'white');
+    $('.js-total-salary').css('background-color', '#d3d9dd');
 }
