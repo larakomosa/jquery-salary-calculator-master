@@ -1,18 +1,17 @@
 console.log('First Weekend Assignment!');
 
-const employeeList = []; // array to store employee information (objects)
+const employeeList = []; //array to store employee information (objects)
 
 $(document).ready(readyNow);
 
 function readyNow() {
-  //function is called once appropriate button is clicked
+  //function called once corresponding button is clicked
   console.log('readyNow');
   $('.js-button').on('click', addEmployee);
   $('.js-employee-list').on('click', '.delete-button', deleteEmployee);
 }
 
 function addEmployee() {
-  //once all employee input fields are completed, the employee is pushed into the array
   if (
     $.trim($('.js-field-first').val()) === '' ||
     $.trim($('.js-field-last').val()) === '' ||
@@ -43,19 +42,19 @@ function addEmployee() {
     $('.js-field-title').val('');
     $('.js-field-salary').val('');
 
-    employeeList.push(employee); //pushes employees to employeeList array
-    displayEmployees(); //send data to display employee function
+    employeeList.push(employee); //stores employee object in array
+    displayEmployees(); //sends data to display employee function
   }
 }
 
 function displayEmployees() {
-  //displays employees on DOM
+  //display employees on DOM
   $('.js-employee-list').empty();
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
 
     if (item.isDeleted === true) {
-      //prevents already deleted employees to be added back to DOM
+      //prevents deleted employees from jumping back on DOM when new employee is submitted
     } else {
       $('.js-employee-list').append(
         `<tr>
@@ -67,11 +66,11 @@ function displayEmployees() {
               /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g,
               ','
             )}</td>
-            <td><button class="delete-button" data-index="${i}">Delete</button></td> 
+            <td><button class="delete-button" data-index="${i}">Delete</button></td>
           </tr>`
       );
     }
-    totalSalaryCosts(); //sends date to totalSalaryCostsFunction
+    totalSalaryCosts();
   }
 }
 
@@ -79,11 +78,11 @@ function totalSalaryCosts() {
   let totalSalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
-    totalSalary += parseInt(item.annualSalary) / 12; //converts string to number and adjusts annual to monthly
+    totalSalary += parseInt(item.annualSalary) / 12;
   }
   $('.js-total-salary').text(
     totalSalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
-  ); //adds total salary costs to DOM  (add commas and prevents decimal values)
+  );
 
   adjustSalary();
 }
@@ -92,26 +91,26 @@ function deleteEmployee() {
   const index = $(this).data('index');
   employeeList[index].isDeleted = true;
 
-  $(this).parent().parent().empty(); //removes employee from Employee Information table
-  employeeList.splice(index, 1); //removes employee from Array
+  $(this).parent().parent().empty();
   console.log('working?');
-  adjustSalary(); //send data so total monthly costs are adjusted accordingly
+
+  adjustSalary();
 }
 
 function adjustSalary() {
-  let totalSalary = 0;
+  let monthlySalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
 
     if (item.isDeleted === false) {
-      totalSalary += parseInt(item.annualSalary / 12);
-    } //figured adjusted monthly costs for all employees not deleted
+      monthlySalary += parseInt(item.annualSalary / 12);
+    }
   }
   $('.js-total-salary').text(
-    totalSalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+    monthlySalary.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
   );
-  if (totalSalary > 20000) {
-    $('.js-total-salary').css('background-color', '#c94d53'); //background color if costs exceed $20,000
-  } else if (totalSalary < 20000)
-    $('.js-total-salary').css('background-color', '#d3d9dd');
+  if (monthlySalary > 20000) {
+    $('.js-total-salary').css('background-color', 'red');
+  } else if (monthlySalary < 20000)
+    $('.js-total-salary').css('background-color', 'white');
 }
