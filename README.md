@@ -24,9 +24,9 @@ The product collects and stores employee information while calculating monthly s
 
 4: Product will display employee information in a table on webpage
 
-5: To delete employee information, select the delete button
+5: To delete employee information, select the delete button. Employee will be removed from the DOM.
 
-6: Once an employee is deleted, monthly salary will be deleted accordingly.
+6: Once an employee is deleted, monthly salary will be adjusted accordingly.
 
 ## Built With
 
